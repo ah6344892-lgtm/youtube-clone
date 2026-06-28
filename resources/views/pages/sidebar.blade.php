@@ -1,4 +1,4 @@
-<aside class="sticky top-19 z-0 ml-1 w-20 mt-5 h-full">
+<aside class="sticky top-19 z-0 h-full">
     {{-- closebar --}}
     <div :class="openSidebar ? 'block' : 'hidden'" class="flex flex-col items-center gap-8 w-20">
         <a href="{{ route('home') }}">

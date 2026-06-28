@@ -1,4 +1,4 @@
-<div :class="searchOpen ? 'mt-14' : 'sticky top-14 opacity-98 z-10 py-1 bg-white'" class="">
+<div :class="searchOpen ? 'mt-14' : 'sticky top-14 pt-3 opacity-98 z-10 ml-2 py-1 bg-white'" class="">
     {{-- class="h-14 px-5 flex items-center gap-3 bg-white sticky top-14 z-10 overflow-hidden" --}}
     <style>
         .scrollbar-hide::-webkit-scrollbar {
@@ -27,7 +27,7 @@
             @foreach ($categories as $category)
                 <a href="{{ route('activeCategory', ['id' => $category->id]) }}" class="cursor-pointer">
                     <button
-                        class="px-4 py-2 rounded-lg cursor-pointer text-sm font-medium {{ $activeCategory === $category->id ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-800' }} whitespace-nowrap shrink-0 transition">
+                        class="px-3 py-1.5 rounded-lg cursor-pointer text-sm font-medium {{ $activeCategory === $category->id ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-800' }} whitespace-nowrap shrink-0 transition">
                         {{ $category->name }}
                     </button>
                 </a>

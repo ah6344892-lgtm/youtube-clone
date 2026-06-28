@@ -16,13 +16,13 @@
 <body x-data="{ openSidebar: true, searchOpen: false }">
 
     {{-- youtube clone header --}}
+    {{-- <div> --}}
     @include('pages.header')
+    {{-- </div>/ --}}
 
     <main class="flex">
         @include('pages.sidebar')
-        <div class="flex flex-1 min-w-0 flex-col w-full h-full">
-            @yield('content')
-        </div>
+        @yield('content')
     </main>
 </body>
 

@@ -31,6 +31,15 @@ class HomeController extends Controller
 
     public function shorts()
     {
-        return view('pages.shorts');
+        $videos = [
+            asset('shorts-videos/video1.mp4'),
+            asset('shorts-videos/video2.mp4'),
+            asset('shorts-videos/video3.mp4'),
+            asset('shorts-videos/video4.mp4'),
+            asset('shorts-videos/video1.mp4'),
+            asset('shorts-videos/video2.mp4'),
+        ];
+
+        return view('shorts', compact('videos'));
     }
 }
