@@ -31,6 +31,6 @@ class HomeController extends Controller
 
     public function shorts()
     {
-        return view('shorts');
+        return view('pages.shorts');
     }
 }
