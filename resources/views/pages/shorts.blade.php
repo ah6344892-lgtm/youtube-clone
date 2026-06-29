@@ -15,7 +15,7 @@
             <div class="snap-start h-screen flex justify-center items-center bg-black rounded-3xl">
 
                 <div class="relative w-full max-w-95 h-screen">
-                    <video class="video w-full h-full object-cover rounded-2xl" autoplay muted loop playsinline>
+                    <video class="video w-full h-full object-cover rounded-2xl" autoplay loop playsinline>
                         <source src="{{ $video }}" type="video/mp4">
                     </video>
                 </div>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ config('app.name', 'Youtube-clone') }}</title>
+    <title>@yield('title', 'Home') - {{ config('app.name', 'Youtube-clone') }}</title>
     <link rel="icon" href="/youtube_clone.ico" sizes="any">
     <link rel="icon" href="/youtube_clone.png" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">

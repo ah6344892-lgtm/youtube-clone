@@ -3,11 +3,16 @@
         <p class="text-center text-sm">{{ session('error') }}</p>
     @endsession --}}
     {{-- video card --}}
-    @forelse ($videos as $video)
+    {{-- @foreach ($videoNames as $name) --}}
+    @forelse ($videos as $i=> $video)
+        @php
+            $randomVideo = $videoNames[array_rand($videoNames)];
+        @endphp
         <div class="cursor-pointer hover:bg-orange-100 transition-all ease-in-out duration-500 rounded-2xl p-2">
             <div class="mb-1.5">
-                <img class="rounded-xl w-full object-cover"
-                    src="https://live.staticflickr.com/7235/6916888998_e71e0c2e43_h.jpg" alt="">
+                {{-- <img class="rounded-xl w-full object-cover"
+                    src="https://live.staticflickr.com/7235/6916888998_e71e0c2e43_h.jpg" alt=""> --}}
+                <video src="{{ asset('long-vides/' . $randomVideo) }}"></video>
             </div>
             <div class="flex">
                 <div class="w-12.5">
@@ -38,5 +43,6 @@
     @empty
         <p class="text-center text-sm">No videos found in this category yet</p>
     @endforelse
+    {{-- @endforeach --}}
 
 </div>
