@@ -12,7 +12,7 @@
             <div class="mb-1.5">
                 {{-- <img class="rounded-xl w-full object-cover"
                     src="https://live.staticflickr.com/7235/6916888998_e71e0c2e43_h.jpg" alt=""> --}}
-                <video src="{{ asset('long-vides/' . $randomVideo) }}"></video>
+                <video class="rounded-xl w-full object-cover" src="{{ asset('long-vides/' . $randomVideo) }}"></video>
             </div>
             <div class="flex">
                 <div class="w-12.5">
