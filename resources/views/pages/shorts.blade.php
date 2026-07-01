@@ -12,19 +12,24 @@
 <div class="flex justify-center items-center w-full">
     <div class="h-screen overflow-y-scroll snap-y snap-mandatory">
         @foreach ($videos as $video)
-            <div class="snap-start h-screen flex justify-center items-center bg-black rounded-3xl">
+            <div class="snap-start flex justify-center items-center bg-black rounded-3xl">
 
-                <div class="relative w-full max-w-95 h-screen">
-                    <video class="video w-full h-full object-cover rounded-2xl" autoplay loop playsinline>
-                        <source src="{{ $video }}" type="video/mp4">
-                    </video>
+                <div class="relative w-full max-w-80 h-screen">
+                    <div>
+                        <video controls muted class="video w-full h-full object-cover rounded-2xl" loop playsinline>
+                            <source src="{{ $video }}" type="video/mp4">
+                        </video>
+                    </div>
+                    <div>
+                        buttons
+                    </div>
                 </div>
 
             </div>
         @endforeach
     </div>
 </div>
-<script>
+{{-- <script>
     document.addEventListener("DOMContentLoaded", () => {
         const videos = document.querySelectorAll(".video");
 
@@ -45,4 +50,4 @@
 
         videos.forEach(video => observer.observe(video));
     });
-</script>
+</script> --}}

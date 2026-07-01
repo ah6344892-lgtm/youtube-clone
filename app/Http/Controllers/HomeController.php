@@ -15,9 +15,10 @@ class HomeController extends Controller
         $videoNames = [
             'long1.mp4',
             'long2.mp4',
-            'long3.mp4',
+            // 'long3.mp4',
             'long4.mp4',
             'long5.mp4',
+
         ];
         $activeCategory = 1;
 
