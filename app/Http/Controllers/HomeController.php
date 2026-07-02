@@ -50,4 +50,9 @@ class HomeController extends Controller
 
         return view('shorts', compact('videos'));
     }
+
+    public function subscriptions()
+    {
+        return view('subscriptions');
+    }
 }

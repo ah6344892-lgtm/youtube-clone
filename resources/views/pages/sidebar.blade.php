@@ -1,4 +1,4 @@
-<aside class="sticky top-19 z-0 h-full">
+<aside class="sticky top-19 z-0 h-full mt-4.5">
     {{-- closebar --}}
     <div :class="openSidebar ? 'block' : 'hidden'" class="flex flex-col items-center gap-8 w-20">
         <a href="{{ route('home') }}">
@@ -23,15 +23,17 @@
                 <p class="text-[10px]">Shorts</p>
             </div>
         </a>
-        <div class="flex flex-col items-center cursor-pointer justify-center gap-1">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false"
-                aria-hidden="true">
-                <path
-                    d="M18 1H6a2 2 0 00-2 2h16a2 2 0 00-2-2Zm3 4H3a2 2 0 00-2 2v13a2 2 0 002 2h18a2 2 0 002-2V7a2 2 0 00-2-2ZM3 20V7h18v13H3Zm13-6.5L10 10v7l6-3.5Z">
-                </path>
-            </svg>
-            <p class="text-[10px]">Subscriptions</p>
-        </div>
+        <a href="{{ route('subscriptions') }}">
+            <div class="flex flex-col items-center cursor-pointer justify-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                    focusable="false" aria-hidden="true">
+                    <path
+                        d="M18 1H6a2 2 0 00-2 2h16a2 2 0 00-2-2Zm3 4H3a2 2 0 00-2 2v13a2 2 0 002 2h18a2 2 0 002-2V7a2 2 0 00-2-2ZM3 20V7h18v13H3Zm13-6.5L10 10v7l6-3.5Z">
+                    </path>
+                </svg>
+                <p class="text-[10px]">Subscriptions</p>
+            </div>
+        </a>
         <div class="flex flex-col items-center justify-center cursor-pointer gap-1">
             <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false"
                 aria-hidden="true">
