@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Models\Categories;
 use App\Models\Video;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Arr;
 
 /**
  * @extends Factory<Video>
@@ -18,11 +19,13 @@ class VideoFactory extends Factory
      */
     public function definition(): array
     {
+        $media = Arr::random(config('videos'));
         return [
             'title' => fake()->sentence(),
+            'name' => $media['video'],
+            'thumbnail' => $media['thumbnail'],
             'description' => fake()->paragraph(),
             'url' => 'default.mp4',
-            'thumbnail' => 'default.jpg',
             'category_id' => Categories::pluck('id')->random(),
         ];
     }

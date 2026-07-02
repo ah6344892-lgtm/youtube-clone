@@ -18,8 +18,9 @@ return new class extends Migration
                 ->constrained('categories')
                 ->cascadeOnDelete();
             $table->string('title');
-            $table->text('description')->nullable();
+            $table->string('name');
             $table->string('thumbnail');
+            $table->text('description')->nullable();
             $table->string('url');
             $table->timestamps();
         });

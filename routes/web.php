@@ -7,3 +7,4 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/category/{id}', [HomeController::class, 'activeCategory'])->name('activeCategory');
 Route::get('shorts', [HomeController::class, 'shorts'])->name('shorts');
 Route::get('subscriptions', [HomeController::class, 'subscriptions'])->name('subscriptions');
+Route::get('watch/{id}', [HomeController::class, 'watch'])->name('watch');

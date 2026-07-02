@@ -5,15 +5,17 @@
     {{-- video card --}}
     {{-- @foreach ($videoNames as $name) --}}
     @forelse ($videos as $i=> $video)
-        @php
+        {{-- @php
             $randomVideo = $videoNames[array_rand($videoNames)];
-        @endphp
+        @endphp --}}
         <div class="cursor-pointer hover:bg-orange-100 transition-all ease-in-out duration-500 rounded-2xl p-2">
-            <div class="mb-1.5">
-                {{-- <img class="rounded-xl w-full object-cover"
-                    src="https://live.staticflickr.com/7235/6916888998_e71e0c2e43_h.jpg" alt=""> --}}
-                <video class="rounded-xl w-full object-cover" src="{{ asset('long-vides/' . $randomVideo) }}"></video>
-            </div>
+            <a href="{{ route('watch', $video->id) }}">
+                <div class="mb-1.5">
+                    <img class="rounded-xl w-full object-cover" src="{{ asset('thumbnails/' . $video->thumbnail) }}"
+                        alt="">
+                    {{-- <video class="rounded-xl w-full object-cover" src="{{ asset('long-vides/' . $video->name) }}"></video> --}}
+                </div>
+            </a>
             <div class="flex">
                 <div class="w-12.5">
                     <img class="rounded-full w-full" src="https://cdn-icons-png.flaticon.com/512/3135/3135823.png"

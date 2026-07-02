@@ -12,17 +12,9 @@ class HomeController extends Controller
         $categories = Categories::orderBy('id')->get();
 
         $videos = Video::all();
-        $videoNames = [
-            'long1.mp4',
-            'long2.mp4',
-            // 'long3.mp4',
-            'long4.mp4',
-            'long5.mp4',
-
-        ];
         $activeCategory = 1;
 
-        return view('home', compact('videoNames', 'categories', 'videos', 'activeCategory'));
+        return view('home', compact('categories', 'videos', 'activeCategory'));
     }
 
     public function activeCategory(int $id)
@@ -54,5 +46,13 @@ class HomeController extends Controller
     public function subscriptions()
     {
         return view('subscriptions');
+    }
+
+    public function watch(int $id)
+    {
+        $id = $id;
+        $video = Video::findOrFail($id);
+
+        return view('watch', compact('video'));
     }
 }
