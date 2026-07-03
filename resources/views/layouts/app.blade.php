@@ -8,12 +8,14 @@
     <link rel="icon" href="/youtube_clone.ico" sizes="any">
     <link rel="icon" href="/youtube_clone.png" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    @vite('resources/css/app.css', 'resources/js/app.js')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body x-data="{ openSidebar: true, searchOpen: false }">
+<body x-data="{ openSidebar: false, searchOpen: false }">
 
     {{-- youtube clone header --}}
     {{-- <div> --}}
